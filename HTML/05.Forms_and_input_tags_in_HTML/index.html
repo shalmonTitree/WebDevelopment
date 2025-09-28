@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Form to apply for Sigma Web Development course - TA </h1>
+    <form action="/submit" method="post">
+        <div>
+            <label for="username">Enter your username</label>
+            <input type="text" id="username" name="username" placeholder="Enter you Username" autofocus>
+        </div>
+        <div>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+        </div>
+        <div>
+            <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+            <label for="subscribe">Subscribe to newsletter</label>
+        </div>
+        <div>
+            <label for="comment">Enter your comment</label>
+            <br>
+            <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
+        </div>
+        <div>
+            <select name="fruits">
+                <option value="apple">Apple</option>
+                <option value="banana">Banana</option>
+                <option value="cherry">Cherry</option>
+          </select>
+        </div>
+
+        <div>
+      <button type="submit">Submit</button>
+    </div>
+    </form>
+</body>
+</html>
+
+
+
+<!-- 1. action
+
+Defines where the form data will be sent when the user submits.
+
+Usually a URL or API endpoint.
+
+<form action="/submit" method="post">
+
+
+👉 Here, when the user clicks Submit, the form data goes to /submit.
+
+2. method
+
+Defines how the form data will be sent.
+
+Common values:
+
+GET → data is appended in the URL (e.g., /submit?username=John).
+
+POST → data is sent in the request body (more secure, used for logins, etc.).
+
+<form action="/submit" method="get">  <!-- data visible in URL -->
+<form action="/submit" method="post"> <!-- data hidden in body -->
+
+3. for
+
+Used with <label> to connect the label with an input.
+
+Must match the input’s id.
+
+Clicking the label focuses or selects the input.
+
+<label for="username">Username</label>
+<input type="text" id="username" name="username">
+
+4. type
+
+Defines the type of input.
+
+Examples:
+
+text → plain text
+
+password → hidden characters
+
+email → email validation
+
+radio → one option among many
+
+checkbox → multiple options
+
+submit → button to submit form
+
+<input type="text">
+<input type="password">
+<input type="radio">
+<input type="checkbox">
+<input type="submit">
+
+5. id
+
+A unique identifier for an element.
+
+Used for labels (for="id") and for JavaScript/CSS targeting.
+
+<input type="text" id="username">
+
+6. name
+
+The key used when sending form data.
+
+Without name, the input won’t be included in the form submission!
+
+<input type="text" name="username" value="John">
+
+
+👉 Submits as: username=John
+
+7. value
+
+The data/value of the input field.
+
+For text fields → user’s input.
+
+For radio/checkbox → what gets submitted if selected.
+
+For submit buttons → button text (if not overridden).
+
+<input type="radio" name="gender" value="male"> Male
+<input type="radio" name="gender" value="female"> Female
+
+
+👉 Submits as: gender=male (if "Male" is selected)
+
+🔑 In short:
+
+action → where data goes
+
+method → how data goes (GET/POST)
+
+for → links <label> to input
+
+type → kind of input (text, radio, etc.)
+
+id → unique identifier for element
+
+name → key in form submission
+
+value → value submitted -->
